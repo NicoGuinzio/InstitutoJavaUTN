@@ -1,6 +1,7 @@
 
 package institutoproyectoingegrador;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -33,5 +34,31 @@ public class Administrativo extends Persona {
         this.clave = JOptionPane.showInputDialog("Ingrese clave para el campus:");
         password = JOptionPane.showInputDialog("Ingrese password:");
         this.pass = Integer.parseInt(password);
+    }
+    
+    
+    //Cargar Materias
+    public void cargarAlumno(ArrayList<Alumno> listaAlumnos) {
+        Alumno nuevoAlumno = new Alumno();  // Esto ya llama a los JOptionPane internos
+        listaAlumnos.add(nuevoAlumno);
+        JOptionPane.showMessageDialog(null, "Alumno cargado con éxito.");
+    }
+    public void cargarDocente(ArrayList<Docente> listaDocentes){
+        Docente nuevoDocente = new Docente();  // Esto ya llama a los JOptionPane internos
+        listaDocentes.add(nuevoDocente);
+        JOptionPane.showMessageDialog(null, "Docente cargado con éxito.");
+    }
+    public void cargarMateria(ArrayList<Materia> listaMaterias){
+        Materia nuevoDocente = new Materia();  // Esto ya llama a los JOptionPane internos
+        listaMaterias.add(nuevoDocente);
+        JOptionPane.showMessageDialog(null, "Docente cargado con éxito.");
+    }
+    
+    public void asignarMateriaAAlumno(Alumno alumno, Materia materia) { 
+    
+    }
+    
+    public void asignarMateriaADocente(Docente docente, Materia materia) { 
+    
     }
 }
