@@ -1,4 +1,3 @@
-
 package institutoproyectoingegrador;
 
 /**
@@ -14,12 +13,10 @@ import javax.swing.JOptionPane;
 public class Persona {
 
     private String nombre;
-    private LocalDate fechaNacimiento;
     private int dni;
     private Direccion direccion;
     private LocalDate fechaDeNacimiento;
     private int edad;
-
 
     public Persona(String nombre, LocalDate fechaNacimiento, int dni, boolean condicionRegular, int materias_aprobadas) {
         this.nombre = nombre;
@@ -35,11 +32,11 @@ public class Persona {
     }
 
     private void ingresarDatos() {
-        this.nombre = JOptionPane.showInputDialog("Ingrese el nombre del alumno: ");
-        this.fechaNacimiento = ingresarEdad();
+        this.nombre = JOptionPane.showInputDialog("Ingrese el nombre: ");
+        this.fechaDeNacimiento = ingresarEdad();
         this.dni = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el DNI: "));
-        
-        this.direccion =  new Direccion();
+
+        this.direccion = new Direccion();
 
     }
 
@@ -57,6 +54,10 @@ public class Persona {
 //                + "Mayor de edad: " + (edad > 18 ? "SI" : (edad == 0 ? "Edad invalida" : "NO")) + "\n"
 //                + direccion.toString() + "\n");
 
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     

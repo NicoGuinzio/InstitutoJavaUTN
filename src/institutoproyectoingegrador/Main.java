@@ -26,23 +26,21 @@ public class Main {
         Administrativo administrativo1 = new Administrativo();
         administrativos.add(administrativo1);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             administrativo1.cargarMateria(materias);
         }
         administrativo1.cargarAlumno(alumnos);
         administrativo1.cargarDocente(docentes);
-        
-        
+
+        alumnos.get(0).mostrarPersona();
+        docentes.get(0).mostrarPersona();
+        administrativos.get(0).mostrarPersona();
 //        administrativo1.asignarMateriaAAlumno(alumno, materia);
 //        administrativo1.asignarMateriaADocente (docente, materia);
 
-        
-        
     }
 
 }
-
-
 
 //
 //        // 1er Año

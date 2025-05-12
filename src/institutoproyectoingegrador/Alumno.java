@@ -30,12 +30,23 @@ public class Alumno extends Persona {
         this.materias_aprobadas = Integer.parseInt(JOptionPane.showInputDialog("Ingrese cantidad de materias aprobadas:"));
         ingresarDatosCampus();
     }
-    
-    private void ingresarDatosCampus(){
+
+    private void ingresarDatosCampus() {
         String password = "";
         this.clave = JOptionPane.showInputDialog("Ingrese clave para el campus:");
         password = JOptionPane.showInputDialog("Ingrese password:");
         this.pass = Integer.parseInt(password);
     }
 
+    public void mostrarAlummo() {
+        super.mostrarPersona();
+        String mensajeAlumno = "Legajo: " + legajo + "\n"
+                + "Condición: " + (condicionRegular ? "Regular" : "Irregular") + "\n"
+                + "Materias aprobadas: " + materias_aprobadas + "\n"
+                + "Clave: " + clave + "\n"
+                + "Password: " + pass;
+
+        JOptionPane.showMessageDialog(null, mensajeAlumno);
+
+    }
 }
